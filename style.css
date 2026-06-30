@@ -1,0 +1,857 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@500;600;700&display=swap');
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+
+font-family:'Poppins',sans-serif;
+
+background:#F8F2E7;
+
+color:#3d2b1f;
+
+overflow-x:hidden;
+
+line-height:1.6;
+
+}
+
+.container{
+
+width:90%;
+
+max-width:1200px;
+
+margin:auto;
+
+}
+
+/* ===========================
+   LINKS
+=========================== */
+
+a{
+
+text-decoration:none;
+
+color:inherit;
+
+}
+
+/* ===========================
+   IMAGES
+=========================== */
+
+img{
+
+max-width:100%;
+
+display:block;
+
+}
+
+/* ===========================
+   HEADER
+=========================== */
+
+header{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+background:#e9d3b7;
+
+backdrop-filter:blur(12px);
+
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+
+z-index:1000;
+
+}
+
+header .container{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:15px 0;
+
+}
+
+/* ===========================
+   LOGO
+=========================== */
+
+.logo{
+
+display:flex;
+
+align-items:center;
+
+gap:15px;
+
+}
+
+.logo img:first-child{
+
+width:120px;
+
+}
+
+.logo img:last-child{
+
+height:50px;
+
+}
+
+/* ===========================
+   NAVBAR
+=========================== */
+
+nav ul{
+
+display:flex;
+
+list-style:none;
+
+gap:35px;
+
+}
+
+nav ul li a{
+
+font-size:16px;
+
+font-weight:500;
+
+transition:.3s;
+
+}
+
+nav ul li a:hover{
+
+color:#9b6a35;
+
+}
+
+/* ===========================
+   ORDER BUTTON
+=========================== */
+
+
+.order-btn:hover{
+
+background:#9b6a35;
+
+transform:translateY(-3px);
+
+}
+
+/* ===========================
+   HERO
+=========================== */
+
+.hero{
+
+height:100vh;
+
+background:#5f492c;
+
+background-size:cover;
+
+background-position:center;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+text-align:center;
+
+position:relative;
+
+}
+
+.overlay{
+
+position:absolute;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:100%;
+
+background:rgba(0,0,0,.45);
+
+}
+
+.hero-content{
+
+position:relative;
+
+z-index:2;
+
+color:#e9d3b7;
+
+width:90%;
+
+max-width:850px;
+
+}
+
+.hero-logo{
+
+width:170px;
+
+margin:auto;
+
+margin-bottom:25px;
+
+}
+
+.hero h1{
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:60px;
+
+font-weight:700;
+
+margin-bottom:20px;
+
+}
+
+.hero p{
+
+font-size:19px;
+
+margin-bottom:35px;
+
+}
+
+/* ===========================
+   HERO BUTTONS
+=========================== */
+
+.hero-buttons{
+
+display:flex;
+
+justify-content:center;
+
+gap:20px;
+
+flex-wrap:wrap;
+
+}
+.btn{
+
+background:#7b4f24;
+
+color:#fff;
+
+padding:15px 35px;
+
+border-radius:40px;
+
+font-weight:600;
+
+transition:.3s;
+
+}
+
+.btn:hover{
+
+background:#9b6a35;
+
+}
+
+.btn2{
+
+background:#25D366;
+
+color:#fff;
+
+padding:15px 35px;
+
+border-radius:40px;
+
+font-weight:600;
+
+transition:.3s;
+
+}
+
+.btn2:hover{
+
+background:#1da851;
+
+}
+#about{
+
+padding:100px 0;
+
+background:#fff;
+
+}
+
+#about h2{
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:46px;
+
+text-align:center;
+
+color:#6b4226;
+
+margin-bottom:30px;
+
+}
+
+#about p{
+
+max-width:900px;
+
+margin:auto;
+
+text-align:center;
+
+font-size:18px;
+
+line-height:1.9;
+
+color:#555;
+
+}
+
+/* ===========================
+   PRODUCTS SECTION
+=========================== */
+
+#products{
+
+padding:100px 0;
+
+background:#F8F2E7;
+
+}
+
+#products h2{
+
+text-align:center;
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:48px;
+
+color:#6b4226;
+
+margin-bottom:60px;
+
+}
+
+/* ===========================
+   PRODUCT GRID
+=========================== */
+
+.product-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:35px;
+
+}
+
+/* ===========================
+   PRODUCT CARD
+=========================== */
+
+.card{
+
+background:#fff;
+
+border-radius:18px;
+
+overflow:hidden;
+
+box-shadow:0 8px 25px rgba(0,0,0,.08);
+
+transition:.4s;
+
+cursor:pointer;
+
+}
+
+.card:hover{
+
+transform:translateY(-12px);
+
+box-shadow:0 18px 35px rgba(0,0,0,.15);
+
+}
+
+.card img{
+
+width:100%;
+
+height:240px;
+
+object-fit:contain;
+
+transition:.4s;
+
+}
+
+.card:hover img{
+
+transform:scale(1.08);
+
+}
+
+.card h3{
+
+padding:20px;
+
+text-align:center;
+
+font-size:22px;
+
+color:#6b4226;
+
+font-weight:600;
+
+}
+
+.card p{
+
+padding:0 20px 25px;
+
+text-align:center;
+
+font-size:16px;
+
+color:#777;
+
+}
+
+/* ===========================
+   SECTION SPACING
+=========================== */
+
+section{
+
+scroll-margin-top:100px;
+
+}
+
+/* ===========================
+   COMMON HEADING
+=========================== */
+
+section h2{
+
+letter-spacing:1px;
+
+}
+
+/* ===========================
+   SMALL ANIMATION
+=========================== */
+
+.card{
+
+animation:fadeUp .8s ease;
+
+}
+
+@keyframes fadeUp{
+
+0%{
+
+opacity:0;
+
+transform:translateY(30px);
+
+}
+
+100%{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+}
+#gallery{
+
+padding:100px 0;
+
+background:#ffffff;
+
+}
+
+#gallery h2{
+
+text-align:center;
+
+font-size:48px;
+
+font-family:'Cormorant Garamond',serif;
+
+color:#6b4226;
+
+margin-bottom:50px;
+
+}
+
+.gallery-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+gap:25px;
+
+}
+
+.gallery-grid img{
+
+width:100%;
+
+height:250px;
+
+object-fit:cover;
+
+border-radius:18px;
+
+transition:.4s;
+
+box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+}
+
+.gallery-grid img:hover{
+
+transform:scale(1.05);
+
+}
+
+/* ===========================
+   WHY CHOOSE US
+=========================== */
+
+.why-us{
+
+padding:100px 0;
+
+background:#F8F2E7;
+
+}
+
+.why-us h2{
+
+text-align:center;
+
+font-size:48px;
+
+font-family:'Cormorant Garamond',serif;
+
+color:#6b4226;
+
+margin-bottom:50px;
+
+}
+
+.why-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+gap:25px;
+
+}
+
+.why-card{
+
+background:#fff;
+
+padding:30px;
+
+border-radius:18px;
+
+text-align:center;
+
+box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+transition:.3s;
+
+}
+
+.why-card:hover{
+
+transform:translateY(-10px);
+
+}
+
+.why-card h3{
+
+margin-bottom:15px;
+
+color:#6b4226;
+
+}
+
+.why-card p{
+
+color:#666;
+
+}
+
+/* ===========================
+   CONTACT
+=========================== */
+
+#contact{
+
+padding:100px 0;
+
+background:#ffffff;
+
+}
+
+#contact h2{
+
+text-align:center;
+
+font-size:48px;
+
+font-family:'Cormorant Garamond',serif;
+
+color:#6b4226;
+
+margin-bottom:40px;
+
+}
+
+.contact-box{
+
+max-width:700px;
+
+margin:auto;
+
+background:#F8F2E7;
+
+padding:40px;
+
+border-radius:20px;
+
+text-align:center;
+
+box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+}
+
+.contact-box p{
+
+font-size:18px;
+
+margin:15px 0;
+
+}
+
+.contact-btn{
+
+display:inline-block;
+
+margin-top:25px;
+
+padding:15px 35px;
+
+background:#25D366;
+
+color:#fff;
+
+border-radius:40px;
+
+font-weight:600;
+
+transition:.3s;
+
+}
+
+.contact-btn:hover{
+
+background:#1da851;
+
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+footer{
+
+background:#e9d3b7;
+
+color:rgb(75, 5, 5);
+
+text-align:center;
+
+padding:50px 20px;
+
+}
+
+.footer-logo{
+
+width:150px;
+
+margin:0 auto 20px;
+
+}
+
+footer p{
+
+margin:10px 0;
+
+}
+
+/* ===========================
+   FLOATING WHATSAPP BUTTON
+=========================== */
+
+
+/* ===========================
+   MOBILE RESPONSIVE
+=========================== */
+
+@media(max-width:768px){
+
+header .container{
+
+flex-direction:column;
+
+gap:15px;
+
+}
+
+nav ul{
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+gap:18px;
+
+}
+
+.hero{
+
+height:auto;
+
+padding:140px 20px 80px;
+
+}
+
+.hero h1{
+
+font-size:36px;
+
+}
+
+.hero p{
+
+font-size:16px;
+
+}
+
+.hero-logo{
+
+width:120px;
+
+}
+
+.hero-buttons{
+
+flex-direction:column;
+
+align-items:center;
+
+}
+
+.btn,
+
+.btn2,
+
+.order-btn,
+
+.contact-btn{
+
+width:220px;
+
+text-align:center;
+
+}
+
+#about h2,
+
+#products h2,
+
+#gallery h2,
+
+.why-us h2,
+
+#contact h2{
+
+font-size:34px;
+
+}
+
+.product-grid,
+
+.gallery-grid,
+
+.why-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.contact-box{
+
+padding:25px;
+
+}
+
+.whatsapp-float{
+
+bottom:15px;
+
+right:15px;
+
+padding:12px 18px;
+
+font-size:14px;
+
+}
+
+}
