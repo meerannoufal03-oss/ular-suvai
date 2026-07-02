@@ -697,31 +697,54 @@ margin:10px 0;
 /* ===========================
    MOBILE FIX
 =========================== */
-
 @media (max-width:768px){
 
-/* Header */
-
 .nav-container{
-    grid-template-columns: 120px 1fr 140px;
-    gap: 8px;
+    display:grid;
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+        "logo button"
+        "menu menu";
+    align-items:center;
+    gap:18px;
+}
+
+.logo{
+    grid-area:logo;
 }
 
 .logo img{
-    width:110px;
-}
-
-nav ul{
-   gap: 12px;
-}
-
-nav ul li a{
-   font-size: 13px;
+    width:130px;
+    height:auto;
 }
 
 .order-btn{
-    padding: 10px 12px;
-    font-size: 12px;
+    grid-area:button;
+    padding:12px 20px;
+    font-size:14px;
+    border-radius:40px;
+    white-space:nowrap;
+}
+
+nav{
+    grid-area:menu;
+    width:100%;
+}
+
+nav ul{
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+
+nav ul li a{
+    font-size:16px;
+    font-weight:600;
+}
+
 }
 
 /* Navbar */
@@ -781,4 +804,3 @@ nav ul li a{
     text-align:center;
 }
 
-}
