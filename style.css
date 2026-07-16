@@ -187,11 +187,15 @@ button{
 
 .logo img{
 
-    width:140px;
+    display: block;
+
+    width:170px;
 
     height:auto;
 
-    border-radius: 40px;
+    object-fit:contain;
+
+    border-radius:50%;
 
 }
 
@@ -284,21 +288,21 @@ button{
 /* Explore Button */
 
 .primary-btn{
-    background:#1f140b;
-    color:#FFD36A;
+    background:#FFD36A;
+    color:#3B2A0F;
     box-shadow:0 10px 25px rgba(0,0,0,.35);
 }
 
 .primary-btn:hover{
-    background:#3b2412;
+    background:#FFD36A;
     transform:translateY(-4px);
 }
 
 /* WhatsApp Button */
 
 .secondary-btn{
-    background:transparent;
-    color:#ffffff;
+    background:#25D366;
+    color:white;
     border:2px solid rgba(255,255,255,.6);
 }
 
@@ -308,7 +312,6 @@ button{
 
 .secondary-btn:hover{
     background:#25D366;
-    border-color:#25D366;
     color:#fff;
 }
 
@@ -952,7 +955,7 @@ CONTACT HEADING
 
 .contact-heading h2{
 
-    font-size:60px;
+    font-size:40px;
 
     color:#3B2A0F;
 
@@ -980,13 +983,17 @@ CONTACT HEADING
 
 .contact-box{
 
-    max-width: 700px;
+    width: 100%;
+
+    max-width: 600px;
+
+    height: 480px;
 
     margin:0 auto;
 
     background:linear-gradient(135deg,#e7c675);
 
-    padding:45px;
+    padding: 45px;
 
     border-radius:25px;
 
@@ -996,7 +1003,7 @@ CONTACT HEADING
 
 .contact-item{
 
-    display:flex;
+    display: flex;
 
     align-items:center;
 
@@ -1363,9 +1370,15 @@ footer{
 
     .footer-logo img{
 
-        width:85px;
+    display: block;
 
-        height:85px;
+    width:170px;
+
+    height:100px;
+
+    object-fit:cover;
+
+    border-radius:70%;
 
     }
 
