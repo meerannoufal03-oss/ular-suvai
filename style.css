@@ -1,18 +1,12 @@
-/*====================================================
+/* ====================================
+   GOOGLE FONT
+==================================== */
 
-        ULAR SUVAI
-        STYLE.CSS - PART 1
-        Global + Top Bar + Navbar + Hero
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
-=====================================================*/
-
-/* Google Font */
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Cormorant+Garamond:wght@500;600;700&display=swap');
-
-/*=========================
-        RESET
-=========================*/
+/* ====================================
+   RESET
+==================================== */
 
 *{
     margin:0;
@@ -25,104 +19,84 @@ html{
 }
 
 body{
-
     font-family:'Poppins',sans-serif;
-
-    background:#faf8f4;
-
-    color:#333;
-
-    overflow-x:hidden;
-
-    line-height:1.7;
-
+    background:#F8F8F8;
+    color:#222;
+    line-height:1.6;
 }
 
 img{
-
-    max-width:100%;
-
+    width:100%;
     display:block;
-
 }
 
 a{
-
     text-decoration:none;
+}
 
-    color:inherit;
+button{
+    border:none;
+    background:none;
+    cursor:pointer;
+}
+
+/* ====================================
+   COLORS
+==================================== */
+
+:root{
+
+    --primary:#1E5631;
+
+    --secondary:#D4A017;
+
+    --white:#ffffff;
+
+    --text:#222;
+
+    --gray:#666;
+
+    --border:#E8E8E8;
+
+    --shadow:0 10px 30px rgba(0,0,0,.08);
 
 }
 
-ul{
-
-    list-style:none;
-
-}
+/* ====================================
+   CONTAINER
+==================================== */
 
 .container{
 
-    width:90%;
+    width:92%;
 
-    max-width:1320px;
+    max-width:1200px;
 
     margin:auto;
 
 }
 
-section{
+/* ====================================
+   HEADER
+==================================== */
 
-    padding:100px 0;
-
-}
-
-/*=========================
-      COLOR VARIABLES
-=========================*/
-
-:root{
-
-    --primary:#24452f;
-
-    --secondary:#5f7d4c;
-
-    --gold:#d9b55b;
-
-    --light:#fffdf8;
-
-    --dark:#202020;
-
-    --white:#ffffff;
-
-    --shadow:0 15px 40px rgba(0,0,0,.08);
-
-    --radius:18px;
-
-}
-
-/*=========================
-        NAVBAR
-=========================*/
-
-header{
+.header{
 
     position:sticky;
 
     top:0;
 
-    width:100%;
+    background:linear-gradient(135deg,#e7c675,#e7c675);
+
+    backdrop-filter:blur(12px);
+
+    box-shadow:0 5px 20px rgba(0,0,0,.05);
 
     z-index:999;
 
-    background:#e7c675;
-
-    box-shadow:0 8px 25px rgba(0,0,0,.06);
-
 }
 
-.navbar{
-
-    height:90px;
+.header .container{
 
     display:flex;
 
@@ -130,104 +104,128 @@ header{
 
     align-items:center;
 
+    padding:14px 0;
+
 }
+
+/* Logo */
 
 .logo img{
 
-    width:175px;
-    height: 90px;
-    object-fit: cover;
-    border-radius: 70%;
-}
+    width:170px;
 
-nav ul{
+    height:90px;
 
-    display:flex;
+    object-fit:cover;
 
-    gap:40px;
+    border-radius:70%;
 
 }
 
-nav ul li a{
+/* Right Side */
 
-    font-size:16px;
-
-    font-weight:600;
-
-    color:#333;
-
-    transition:.3s;
-
-    position:relative;
-
-}
-
-nav ul li a::after{
-
-    content:"";
-
-    position:absolute;
-
-    left:0;
-
-    bottom:-8px;
-
-    width:0;
-
-    height:2px;
-
-    background:var(--gold);
-
-    transition:.35s;
-
-}
-
-nav ul li a:hover{
-
-    color:var(--primary);
-
-}
-
-nav ul li a:hover::after{
-
-    width:100%;
-
-}
-
-/*=========================
-      ORDER BUTTON
-=========================*/
-
-.order-btn{
-
-    background:#423107;
-
-    color:wheat;
-
-    padding:14px 28px;
-
-    border-radius:50px;
+.header-right{
 
     display:flex;
 
     align-items:center;
 
-    gap:10px;
+    gap:12px;
+
+}
+
+/* Order Button */
+
+.order-btn{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    background:#161001;
+
+    color:#ffe08a;
+
+    padding:12px 22px;
+
+    border-radius:50px;
 
     font-weight:600;
 
-    transition:.35s;
+    transition:.3s;
 
 }
 
 .order-btn:hover{
 
-    background:#796736;
+    background:#1EBE57;
 
 }
 
+/* ====================================
+   MOBILE
+==================================== */
+
+@media(max-width:768px){
+
+.header .container{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    flex-wrap:nowrap;
+
+}
+
+.logo img{
+
+    width:70px;
+
+    height:70px;
+
+}
+
+.header-right{
+
+    gap:8px;
+
+}
+
+.icon-btn{
+
+    width:38px;
+
+    height:38px;
+
+    font-size:15px;
+
+}
+
+.order-btn{
+
+    padding:10px 14px;
+
+    font-size:13px;
+
+}
+
+}
+
+/*====================================================
+
+        ULAR SUVAI
+        STYLE.CSS - PART 2
+        Hero Buttons + Hero Cards + Products
+
+=====================================================*/
+
 /*=========================
-        HERO
+      HERO BUTTONS
 =========================*/
 
 .hero{
@@ -311,7 +309,7 @@ nav ul li a:hover::after{
 
 .hero h1 span{
 
-    color:var(--gold);
+    color:#ffe08a;
 
 }
 
@@ -319,7 +317,7 @@ nav ul li a:hover::after{
 
     font-size:18px;
 
-    color:#f2f2f2;
+    color:#ffe08a;
 
     margin-bottom:40px;
 
@@ -363,7 +361,7 @@ nav ul li a:hover::after{
 
     background:var(--gold);
 
-    color:#222;
+    color:#ffe08a;
 
     border-radius:50px;
 
@@ -378,8 +376,6 @@ nav ul li a:hover::after{
 .primary-btn:hover{
 
     transform:translateY(-5px);
-
-    background:#e7c675;
 
 }
 
@@ -397,7 +393,7 @@ nav ul li a:hover::after{
 
     border:2px solid rgba(255,255,255,.45);
 
-    color:#fff;
+    color:#ffe08a;
 
     border-radius:50px;
 
@@ -410,8 +406,6 @@ nav ul li a:hover::after{
 .secondary-btn:hover{
 
     background:#25D366;
-
-    border-color:#25D366;
 
 }
 
@@ -485,9 +479,10 @@ nav ul li a:hover::after{
 
 }
 
-/*=========================
-      PRODUCTS SECTION
-=========================*/
+
+/* ====================================
+   PRODUCTS
+==================================== */
 
 .products-section{
 
@@ -515,7 +510,7 @@ nav ul li a:hover::after{
 
     background:rgba(212, 38, 8, 0.08);
 
-    color:var(--primary);
+    color:#3B2A0F;
 
     border-radius:40px;
 
@@ -832,383 +827,184 @@ nav ul li a:hover::after{
 
 }
 
-/*====================================================
+/* ====================================
+   CONTACT SECTION
+==================================== */
 
-        ULAR SUVAI
-        STYLE.CSS - PART 3
-        About Section + Contact Section
-
-=====================================================*/
-
-/*=========================
-      CONTACT SECTION
-=========================*/
-
-.contact-section{
-
-    background:linear-gradient(180deg,wheat 0%,wheat 100%);
-
+.contact{
+    padding:80px 0;
+    background: wheat;
 }
 
-.contact-grid{
+/*==============================
+CONTACT HEADING
+==============================*/
 
-    display:grid;
+.contact-heading{
 
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    padding:80px 20px 40px;
 
-    gap:30px;
-
-    margin-top:60px;
-
-}
-
-.contact-card{
-
-    background:wheat;
-
-    border-radius:24px;
-
-    padding:40px 30px;
-
-    text-align:center;
-
-    box-shadow:#423107;
-
-    transition:.35s;
-
-}
-
-.contact-card:hover{
-
-    transform:translateY(-8px);
-
-}
-
-.contact-card i{
-
-    width:80px;
-
-    height:80px;
-
-    margin:auto;
-
-    margin-bottom:20px;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    border-radius:50%;
-
-    background:#423107;
-
-    color:var(--gold);
-
-    font-size:32px;
-
-}
-
-.contact-card h3{
-
-    font-size:24px;
-
-    color:#423107;
-
-    margin-bottom:12px;
-
-}
-
-.contact-card p{
-
-    color:#423107;
-
-    font-size:16px;
-
-}
-
-.contact-button{
-
-    text-align:center;
-
-    margin-top:60px;
-
-}
-
-.order-btn-large{
-
-    display:inline-flex;
-
-    align-items:center;
-
-    gap:12px;
-
-    background:#423107;
-
-    color:var(--gold);
-
-    padding:18px 42px;
-
-    border-radius:50px;
-
-    font-size:17px;
-
-    font-weight:600;
-
-    transition:.35s;
-
-}
-
-.order-btn-large:hover{
-
-    transform:translateY(-5px);
-
-    background:#1db954;
-
-}
-
-/*=========================
-      ABOUT SECTION
-=========================*/
-
-.about-section{
-
-    background:linear-gradient(180deg,wheat 0%,wheat 100%);
-
-    padding:110px 0;
-
-    position:relative;
-
-    overflow:hidden;
-
-}
-
-.about-section::before{
-
-    content:"";
-
-    position:absolute;
-
-    width:320px;
-
-    height:320px;
-
-    background:wheat;
-
-    border-radius:50%;
-
-    top:-140px;
-
-    left:-120px;
-
-}
-
-.about-wrapper{
-
-    position:relative;
-
-    z-index:2;
-
-}
-
-.about-content{
-
-    max-width:900px;
-
-    margin:auto;
+    background: wheat;
 
     text-align:center;
 
 }
 
-.about-tag{
+.contact-tag{
 
     display:inline-block;
 
-    background:rgba(24,77,71,.10);
+    background:#e7c675;
 
-    color:#583103;
+    color:#3B2A0F;
 
-    padding:12px 28px;
+    padding:16px 50px;
 
     border-radius:50px;
 
-    font-size:15px;
+    font-size:20px;
 
-    font-weight:600;
+    font-weight:700;
 
-    margin-bottom:25px;
+    letter-spacing:1px;
 
-}
-
-.about-content h2{
-
-    font-family:'Cinzel',serif;
-
-    font-size:52px;
-
-    color:#583103;
-
-    line-height:1.3;
-
-    margin-bottom:25px;
+    margin-bottom:35px;
 
 }
 
-.about-content p{
+.contact-heading h2{
 
-    font-size:17px;
+    font-size:60px;
 
-    color:#583103;
+    color:#3B2A0F;
 
-    line-height:2;
+    line-height:1.25;
 
-    max-width:780px;
+    font-weight:700;
 
-    margin:auto auto 50px;
-
-}
-
-/*=========================
-      FEATURES
-=========================*/
-
-.about-features{
-
-    display:grid;
-
-    grid-template-columns:repeat(2,1fr);
-
-    gap:25px;
+    margin-bottom:30px;
 
 }
 
-.feature{
+.contact-heading p{
+
+    max-width:700px;
+
+    margin:auto;
+
+    font-size:22px;
+
+    color:#3B2A0F;
+
+    line-height:1.8;
+
+}
+
+.contact-box{
+
+    max-width: 700px;
+
+    margin:0 auto;
+
+    background:linear-gradient(135deg,#e7c675);
+
+    padding:45px;
+
+    border-radius:25px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.contact-item{
 
     display:flex;
 
     align-items:center;
 
-    gap:15px;
+    gap:18px;
 
     background:wheat;
 
-    padding:22px;
+    padding:18px 20px;
 
-    border-radius:18px;
+    border-radius:15px;
 
-    border:1px solid rgba(24,77,71,.08);
-
-    box-shadow:0 12px 30px rgba(0,0,0,.08);
-
-    transition:.35s;
+    transition:.3s;
 
 }
 
-.feature:hover{
+.contact-item:hover{
 
-    transform:translateY(-8px);
-
-    box-shadow:0 20px 40px rgba(0,0,0,.12);
+    background:#e7c675;
 
 }
 
-.feature i{
+.contact-item i{
 
     width:55px;
 
     height:55px;
 
-    display:flex;
+    border-radius:50%;
 
-    align-items:center;
+    display:flex;
 
     justify-content:center;
 
-    border-radius:50%;
+    align-items:center;
 
-    background:linear-gradient(135deg,#222,#222);
+    background:#361f04;
 
     color:wheat;
 
-    font-size:20px;
+    font-size:22px;
 
 }
 
-.feature span{
+.contact-item h4{
 
     color:#361f04;
 
-    font-size:16px;
-
-    font-weight:600;
+    margin-bottom:4px;
 
 }
 
-/*=========================
-      MOBILE
-=========================*/
+.contact-item p{
 
-@media(max-width:768px){
+    color:#361f04;
 
-.about-section{
+    font-size:15px;
 
+}
+
+/* ====================================
+   ABOUT SECTION
+==================================== */
+
+.about{
     padding:80px 0;
-
+    background:wheat;
 }
 
-.about-content h2{
-
-    font-size:36px;
-
+.about .section-title p{
+    max-width:750px;
+    margin:15px auto 0;
+    font-size:17px;
+    color:#361f04;
+    line-height:1.8;
 }
 
-.about-content p{
 
-    font-size:15px;
-
-}
-
-.about-features{
-
-    grid-template-columns:1fr;
-
-    gap:18px;
-
-}
-
-.feature{
-
-    padding:18px;
-
-}
-
-.feature span{
-
-    font-size:15px;
-
-}
-
-}
-
-/*====================================================
-
-        ULAR SUVAI
-        STYLE.CSS - PART 4
-        Premium Footer + Tablet Responsive
-
-=====================================================*/
-
-/*=========================
-        FOOTER
-=========================*/
+/* ====================================
+   FOOTER
+==================================== */
 
 footer{
 
-    background:linear-gradient(180deg,wheat 0%,#e7c675 100%);
+    background:linear-gradient(180deg,#e7c675 0%,#e7c675 100%);
 
-    color:#f4f3f5;
+    color:#361f04;
 
     padding:80px 0 30px;
 
@@ -1224,7 +1020,7 @@ footer{
 
     padding-bottom:50px;
 
-    border-bottom:1px solid #fdfdf9 (255, 255, 255, 0.932);
+    border-bottom:#361f04;
 
 }
 
@@ -1423,502 +1219,105 @@ footer{
 
 }
 
-/*====================================================
+/* ====================================
+   MOBILE RESPONSIVE
+==================================== */
 
-        ULAR SUVAI
-        STYLE.CSS - PART 5
-        Mobile Responsive
+@media(max-width:992px){
 
-=====================================================*/
+.contact-heading{
 
-@media (max-width:768px){
-
-section{
-
-    padding:70px 0;
+    padding: 60px 20px 30px;
 
 }
 
-.container{
+.contact-tag{
 
-    width:92%;
-
-}
-
-/*=========================
-        TOP BAR
-=========================*/
-
-.top-bar{
-
-    display:none;
+    padding: 12px 35px;
+    font-size: 16px;
 
 }
 
-/*=========================
-        NAVBAR
-=========================*/
+.contact-heading h2{
 
-header{
+    font-size: 34px;
+}
 
-    position:sticky;
+.contact-heading p{
 
-    top:0;
+    font-size: 18px;
+}
+
+.contact-box{
+
+    grid-template-columns:1fr;
 
 }
 
-.navbar{
+}
 
-    height:80px;
+@media(max-width:768px){
 
-    flex-direction:column;
+.about,
 
-    justify-content:center;
+.contact{
 
-    gap:15px;
-
-    padding:15px 0;
+    padding:60px 0;
 
 }
 
-.logo img{
+.contact-box{
 
-    width:145px;
-
-}
-
-nav ul{
-
-    gap:20px;
-
-    flex-wrap:wrap;
-
-    justify-content:center;
+    padding:25px;
 
 }
 
-nav ul li a{
-
-    font-size:15px;
-
-}
-
-.order-btn{
-
-    padding:12px 24px;
-
-    font-size:14px;
-
-}
-
-/*=========================
-        HERO
-=========================*/
-
-.hero{
-
-    min-height:auto;
-
-    padding:120px 0 70px;
+.contact-left{
 
     text-align:center;
 
 }
 
-.hero-content{
+.contact-left h2{
 
-    max-width:100%;
-
-}
-
-.hero h1{
-
-    font-size:42px;
+    font-size:28px;
 
 }
 
-.hero p{
-
-    font-size:16px;
-
-    margin:25px auto 35px;
-
-}
-
-.hero-buttons{
-
-    justify-content:center;
-
-}
-
-.primary-btn,
-.secondary-btn{
-
-    width:100%;
-
-    justify-content:center;
-
-}
-
-.hero-highlights{
-
-    grid-template-columns:1fr;
-
-    margin-top:60px;
-
-}
-
-/*=========================
-      PRODUCTS
-=========================*/
-
-.section-title h2{
-
-    font-size:40px;
-
-}
-
-.products-grid{
-
-    grid-template-columns:1fr;
-
-}
-
-.product-image img{
-
-    height:220px;
-
-}
-
-/*=========================
-        CONTACT
-=========================*/
-
-.contact-grid{
-
-    grid-template-columns:1fr;
-
-}
-
-.order-btn-large{
-
-    width:100%;
-
-    justify-content:center;
-
-}
-
-/*=========================
-        FOOTER
-=========================*/
-
-.footer-top{
-
-    grid-template-columns:1fr;
-
-    text-align:center;
-
-}
-
-.footer-logo img{
-
-    margin:0 auto 20px;
-
-}
-
-.footer-logo p{
-
-    margin:auto;
-
-}
-
-.footer-links ul{
-
-    align-items:center;
-
-}
-
-.footer-social{
-
-    flex-wrap:wrap;
-
-}
-
-}
-
-/*====================================================
-
-        ULAR SUVAI
-        STYLE.CSS - PART 6
-        Extra Small Devices + Final Styling
-
-=====================================================*/
-
-@media (max-width:480px){
-
-/*=========================
-        NAVBAR
-=========================*/
-
-.navbar{
-
-    height:auto;
-
-    padding:15px 0;
-
-}
-
-.logo img{
-
-    width:120px;
-
-}
-
-nav ul{
-
-    gap:14px;
-
-}
-
-nav ul li a{
-
-    font-size:14px;
-
-}
-
-.order-btn{
-
-    width:100%;
-
-    justify-content:center;
-
-    padding:12px 18px;
-
-    font-size:14px;
-
-}
-
-/*=========================
-        HERO
-=========================*/
-
-.hero{
-
-    padding:100px 0 60px;
-
-}
-
-.hero-tag{
-
-    font-size:12px;
-
-    padding:10px 18px;
-
-}
-
-.hero h1{
-
-    font-size:34px;
-
-    line-height:1.2;
-
-}
-
-.hero p{
-
-    font-size:15px;
-
-}
-
-.primary-btn,
-.secondary-btn{
-
-    font-size:15px;
-
-    padding:14px 20px;
-
-}
-
-/*=========================
-      SECTION TITLE
-=========================*/
-
-.section-title h2{
-
-    font-size:34px;
-
-}
-
-.section-title p{
-
-    font-size:15px;
-
-}
-
-/*=========================
-      PRODUCT CARD
-=========================*/
-
-.product-card{
-
-    border-radius:18px;
-
-}
-
-.product-image{
-
-    padding:18px;
-
-}
-
-.product-image img{
-
-    height:190px;
-
-}
-
-.product-content{
-
-    padding:22px;
-
-}
-
-.product-content h3{
-
-    font-size:22px;
-
-}
-
-/*=========================
-        ABOUT
-=========================*/
-
-.about-content h2{
-
-    font-size:34px;
-
-}
-
-.about-content p{
-
-    font-size:15px;
-
-}
-
-.feature{
+.contact-item{
 
     padding:15px;
 
 }
 
-/*=========================
-        CONTACT
-=========================*/
+.contact-item i{
 
-.contact-card{
+    width:45px;
 
-    padding:30px 20px;
+    height:45px;
 
-}
-
-.contact-card i{
-
-    width:65px;
-
-    height:65px;
-
-    font-size:26px;
+    font-size:18px;
 
 }
 
-.contact-card h3{
+.footer-container{
 
-    font-size:21px;
-
-}
-
-.order-btn-large{
-
-    font-size:15px;
-
-    padding:15px 22px;
-
-}
-
-/*=========================
-        FOOTER
-=========================*/
-
-.footer{
+    flex-direction:column;
 
     text-align:center;
 
 }
 
+.footer-social{
+
+    justify-content:center;
+
+}
+
 .footer-logo img{
 
-    width:140px;
-
-}
-
-.footer-links h3,
-
-.footer-contact h3{
-
-    font-size:20px;
-
-}
-
-.footer-bottom p{
-
-    font-size:13px;
+    margin:0 auto 15px;
 
 }
 
 }
-
-/*=========================
-      CUSTOM SCROLLBAR
-=========================*/
-
-::-webkit-scrollbar{
-
-    width:10px;
-
-}
-
-::-webkit-scrollbar-track{
-
-    background:#f1f1f1;
-
-}
-
-::-webkit-scrollbar-thumb{
-
-    background:var(--primary);
-
-    border-radius:10px;
-
-}
-
-::-webkit-scrollbar-thumb:hover{
-
-    background:var(--gold);
-
-}
-
-/*=========================
-      TEXT SELECTION
-=========================*/
-
-::selection{
-
-    background:var(--gold);
-
-    color:#222;
-
-}
-
-/*=========================
-        END
-=========================*/
